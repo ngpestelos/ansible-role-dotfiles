@@ -12,6 +12,8 @@
 
 - name: Remove existing symlinks
   shell: "make clean chdir={{ dotfiles_path }}"
+  sudo_user: deploy
 
 - name: Install dotfiles
   shell: "make install chdir={{ dotfiles_path }}"
+  sudo_user: deploy
