@@ -1,0 +1,4 @@
+---
+src_path: "/home/deploy/src"
+dotfiles_path: "{{ src_path }}/dotfiles"
+dotfiles_url: "https://github.com/ngpestelos/dotfiles.git"
