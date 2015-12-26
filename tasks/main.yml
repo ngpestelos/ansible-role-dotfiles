@@ -10,10 +10,6 @@
 - name: Update submodules
   shell: "git submodule update --init chdir={{ dotfiles_path }}"
 
-- name: Remove existing symlinks
-  shell: "make clean chdir={{ dotfiles_path }}"
-  sudo_user: deploy
-
 - name: Install dotfiles
   shell: "make install chdir={{ dotfiles_path }}"
   sudo_user: deploy
