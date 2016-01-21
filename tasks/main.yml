@@ -3,13 +3,18 @@
   file:
     path: "{{ dotfiles_path }}"
     state: directory
+    owner: deploy
+    group: deploy
 
 - name: Clone dotfiles
   git:
     repo: "{{ dotfiles_url }}"
     dest: "{{ dotfiles_path }}"
     track_submodules: True
+  become: True
+  become_user: deploy
 
 - name: Install dotfiles
   shell: "make install chdir={{ dotfiles_path }}"
-  sudo_user: deploy
+  become: True
+  become_user: deploy
