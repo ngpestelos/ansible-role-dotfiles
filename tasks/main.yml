@@ -5,10 +5,10 @@
     state: directory
 
 - name: Clone dotfiles
-  shell: "git init && git pull {{ dotfiles_url }} chdir={{ dotfiles_path }}"
-
-- name: Update submodules
-  shell: "git submodule update --init chdir={{ dotfiles_path }}"
+  git:
+    repo: "{{ dotfiles_url }}"
+    dest: "{{ dotfiles_path }}"
+    track_submodules: True
 
 - name: Install dotfiles
   shell: "make install chdir={{ dotfiles_path }}"
