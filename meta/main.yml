@@ -8,9 +8,8 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - trusty
+        - xenial
   categories:
     - development
     - system
     - web
-dependencies:
-  - ngpestelos.common
