@@ -2,4 +2,3 @@
 dotfiles_home: "/home/{{ dotfiles_user }}"
 dotfiles_path: "{{ dotfiles_home }}/.dotfiles"
 dotfiles_repo: "https://github.com/ngpestelos/dotfiles.git"
-dotfiles_user: "deploy"
