@@ -12,6 +12,7 @@
     repo: "{{ dotfiles_repo }}"
     dest: "{{ dotfiles_path }}"
     track_submodules: True
+    force: True
   become: True
   become_user: "{{ dotfiles_user }}"
   tags: dotfiles
